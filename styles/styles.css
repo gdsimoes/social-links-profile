@@ -54,14 +54,26 @@ body {
 article {
     width: 327px;
     height: 579px;
+    border-radius: 12px;
 
     padding: 24px;
     color: var(--white);
+    background-color: var(--dark-grey);
+    text-align: center;
+}
+
+/* Header */
+header img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
 }
 
 hgroup h1 {
     font-size: 24px;
     font-weight: 600;
+
+    margin-bottom: 4px;
 }
 
 hgroup p {
@@ -79,4 +91,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+
+    margin-bottom: 24px;
 }
