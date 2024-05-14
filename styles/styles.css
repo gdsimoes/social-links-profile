@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: "Inter";
     src: url("/assets/fonts/woff/subset-Inter-SemiBold.woff2") format("woff2"),
@@ -25,6 +26,110 @@
     font-display: swap;
 }
 
+/* Variables */
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
 html {
     font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+body {
+    min-height: max(100svh, 650px);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--off-black);
+}
+
+article {
+    width: 327px;
+    height: 579px;
+    border-radius: 12px;
+
+    padding: 24px;
+    color: var(--white);
+    background-color: var(--dark-grey);
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    margin-bottom: 24px;
+}
+
+img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 4px;
+}
+
+hgroup p {
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* Navigation */
+ul {
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+li a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+
+    display: block;
+    padding: 12px;
+    background-color: var(--grey);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer.attribution {
+    position: absolute;
+    bottom: 20px;
+
+    font-size: 11px;
+    color: var(--white);
+    text-align: center;
+}
+
+footer.attribution a {
+    color: inherit;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    footer.attribution a:hover {
+        text-decoration: underline;
+    }
 }
