@@ -33,6 +33,19 @@
     --grey: hsl(0, 0%, 20%);
     --dark-grey: hsl(0, 0%, 12%);
     --off-black: hsl(0, 0%, 8%);
+
+    --card-width: 327px;
+    --card-height: 579px;
+    --padding-size: 24px;
+}
+
+/* Desktop Variables */
+@media (min-width: 768px) {
+    :root {
+        --card-width: 384px;
+        --card-height: 611px;
+        --padding-size: 40px;
+    }
 }
 
 html {
@@ -53,11 +66,11 @@ body {
 }
 
 article {
-    width: 327px;
-    height: 579px;
+    width: var(--card-width);
+    height: var(--card-height);
     border-radius: 12px;
 
-    padding: 24px;
+    padding: var(--padding-size);
     color: var(--white);
     background-color: var(--dark-grey);
     text-align: center;
@@ -128,7 +141,17 @@ footer.attribution a {
     text-decoration: none;
 }
 
+/* Hover effects */
 @media (hover: hover) and (pointer: fine) {
+    li a {
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    li a:hover {
+        color: var(--grey);
+        background-color: var(--green);
+    }
+
     footer.attribution a:hover {
         text-decoration: underline;
     }
