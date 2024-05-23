@@ -128,7 +128,17 @@ footer.attribution a {
     text-decoration: none;
 }
 
+/* Hover effects */
 @media (hover: hover) and (pointer: fine) {
+    li a {
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    li a:hover {
+        color: var(--grey);
+        background-color: var(--green);
+    }
+
     footer.attribution a:hover {
         text-decoration: underline;
     }
